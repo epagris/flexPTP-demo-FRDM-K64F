@@ -1,0 +1,69 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "OpenOCD Launch",
+            "cwd": "${workspaceFolder}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "executable": "${command:cmake.launchTargetPath}",
+            "servertype": "openocd",
+            "device": "MK64FN1M0VLL12",
+            "runToEntryPoint": "main",
+            //"svdFile": "",          
+            "gdbPath": "gdb-multiarch",
+            "configFiles": [
+                "board/nxp_frdm-k64f.cfg"
+            ],
+            "openOCDLaunchCommands": [
+                "init",
+                "reset halt",
+                "$_TARGETNAME configure -rtos FreeRTOS"
+            ],
+            "showDevDebugOutput": "raw"
+        },
+        {
+            "name": "OpenOCD Attach",
+            "cwd": "${workspaceFolder}",
+            "type": "cortex-debug",
+            "request": "attach",
+            "executable": "${command:cmake.launchTargetPath}",
+            "servertype": "openocd",
+            "device": "MK64FN1M0VLL12",
+            "runToEntryPoint": "main",
+            //"svdFile": "",          
+            "gdbPath": "gdb-multiarch",
+            "configFiles": [
+                "board/nxp_frdm-k64f.cfg"
+            ],
+            "openOCDLaunchCommands": [
+                "$_TARGETNAME configure -rtos FreeRTOS"
+            ],
+            "showDevDebugOutput": "raw"
+        },
+        {
+            "name": "MCUXpresso Launch",
+            "type": "mcuxpresso-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": {
+                "elf": "${command:cmake.launchTargetPath}"
+            },
+            "stopAtSymbol": "main",
+            "probeSerialNumber": "024002269ecc4e570000000000000000000000006315b3ef",
+            "isAttach": false,
+            "skipBuildBeforeDebug": false,
+            "gdbInitCommands": [
+                "set remotetimeout 600",
+                "set debug-file-directory",
+                "set non-stop off"
+            ],
+            "gdbServerConfigs": {
+                "linkserver": {},
+                "segger": {},
+                "pemicro": {}
+            },
+            "showDevDebugOutput": "none"
+        }
+    ]
+}

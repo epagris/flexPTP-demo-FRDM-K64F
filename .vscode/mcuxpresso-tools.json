@@ -1,0 +1,15 @@
+{
+  "version": "25.3",
+  "toolchainPath": "",
+  "linkedProjects": [],
+  "trustZoneType": "none",
+  "multicoreType": "none",
+  "projectType": "sdk-freestanding",
+  "sdk": {
+    "version": "2.11.0",
+    "path": "",
+    "boardId": "frdmk64f",
+    "deviceId": "MK64FN1M0xxx12",
+    "coreId": "core0_MK64FN1M0xxx12"
+  }
+}

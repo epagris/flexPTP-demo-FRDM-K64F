@@ -1,0 +1,6 @@
+[submodule "Modules/embfmt"]
+	path = Modules/embfmt
+	url = https://github.com/epagris/embfmt
+[submodule "Modules/flexPTP"]
+	path = Modules/flexPTP
+	url = https://github.com/epagris/flexPTP.git

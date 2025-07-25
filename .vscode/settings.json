@@ -1,0 +1,11 @@
+    {
+        "C_Cpp.intelliSenseEngine": "disabled",
+        "clangd.arguments": [
+            "--query-driver=/usr/bin/arm-none-eabi-gcc",
+            "--compile-commands-dir=build/debug",
+            "--function-arg-placeholders=false",
+            "--clang-tidy",
+            "--header-insertion=never"
+        ],
+        "mcuxpresso.debug.variableUseNaturalFormat": true,
+    }
