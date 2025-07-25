@@ -45,7 +45,7 @@ The project is fully CMake managed. Configure and invoke the cross-compiler usin
 cmake . -B build -DCMAKE_TOOLCHAIN_FILE=arm-none-eabi-gcc.cmake
 cmake --build build --target flexptp-demo --
 ```
-Once the building has concluded the output binaries would be deposited in the `build` directory: `flexptp-demo.elf`, `flexptp-demo.bin`, `flexptp-demo.hex`
+Once the building has concluded the output binaries would be deposited in the `build` directory: `flexptp-demo.elf`, `flexptp-demo.hex`
 
 ## Deploying
 
