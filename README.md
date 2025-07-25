@@ -53,7 +53,7 @@ Once the building has concluded the output binaries would be deposited in the `b
 
 The compiled binaries can be downloaded onto the devboard through several tools:
 
-### Using the `openocd` tool
+#### Using the `openocd` tool
 
 The [OpenOCD](https://openocd.org/) programming/debugging tool can also be used to upload the firmware using the following command:
 
@@ -61,7 +61,7 @@ The [OpenOCD](https://openocd.org/) programming/debugging tool can also be used 
 
 OpenOCD is also available through the common Linux package managers.
 
-### Using the MCUXpresso utilities
+#### Using the MCUXpresso utilities
 
 To download and debug the firmware using the [MCUXpresso VSCode extension](https://marketplace.visualstudio.com/items?itemName=NXPSemiconductors.mcuxpresso) features configure the respective path variables. To learn more, read the [development](#development) section.
 
