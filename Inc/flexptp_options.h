@@ -31,6 +31,8 @@
 #include <eth_custom/ethernetif.h>
 #include "flexPTP_port/ptp_port_mk64f_lwip.h"
 
+#define __PRI64_PREFIX "l"
+
 #define PTP_CONFIG_LEADING_PARAMS netif_default
 
 #define PTP_HW_INIT() ethernetif_ptp_init(PTP_CONFIG_LEADING_PARAMS)

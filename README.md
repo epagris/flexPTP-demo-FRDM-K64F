@@ -37,6 +37,16 @@ The following two pieces of software are necessary for building:
 
 The project relies on the [NXP MCUXpresso SDK](https://github.com/nxp-mcuxpresso/mcux-sdk). The SDK's root dir must be exported through the `MCUXSDK` environmental variable so that CMake can reference it using `$ENV{MCUXSDK}`. Alternatively, set the path using the `MCUXDSK` variable on the command line during CMake configuration time (`-DMCUXSDK=...`).
 
+#### Installing the NXP MCUXpresso SDK
+
+The MCUXpresso SDK can be downloaded either using directly the NXP's `west` tool or via the `Import Repository` feature of the [VSCode MCUXpresso extension](https://marketplace.visualstudio.com/items?itemName=NXPSemiconductors.mcuxpresso).
+
+The project relies on the `Legacy 2.x SDK` that is deployed the following way using the shell: 
+
+- **Install the `west` tool**, the process is described here. I recommend using Python virtual environments.
+- **Initialize the `west` environment**: `west init -m https://github.com/NXP-mcuxpresso/mcux-sdk --mr main <target directory>`
+- **Download the required modules**: `west update manifest FreeRTOS-Kernel lwip mcux-soc-svd CMSIS_5`. You should see (at least) a `core`, `middleware`, `rtos` and an `svd` directory in the SDK root after a successful module download.
+
 ### Compiling
 
 The project is fully CMake managed. Configure and invoke the cross-compiler using the commands below:

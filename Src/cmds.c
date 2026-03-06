@@ -20,7 +20,7 @@ CMD_FUNCTION(os_info) {
 }
 
 CMD_FUNCTION(start_flexptp) {
-    if (!task_ptp_is_operating()) {
+    if (!is_flexPTP_operating()) {
         MSG("Starting flexPTP...\n\n");
         reg_task_ptp();
     } else {
